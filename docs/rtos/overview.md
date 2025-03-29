@@ -5,10 +5,10 @@ A **Real-Time Operating System (RTOS)** is an operating system designed to handl
 
 ## Why Use an RTOS on FPGA?
 Running an RTOS on an FPGA-based soft core like MicroBlaze enables:  
-✅ Real-time processing for embedded applications.  
-✅ Efficient resource management for multiple concurrent tasks.  
-✅ Hardware acceleration using FPGA peripherals.  
-✅ Improved system responsiveness and reliability.  
+ - Real-time processing for embedded applications.  
+ - Efficient resource management for multiple concurrent tasks.  
+ - Hardware acceleration using FPGA peripherals.  
+ - Improved system responsiveness and reliability.  
 
 ## Key Characteristics of an RTOS
 - **Deterministic Scheduling**: Tasks are executed within strict time constraints.  
