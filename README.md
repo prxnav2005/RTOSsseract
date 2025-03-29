@@ -2,8 +2,6 @@
 
 This project aims to build and run an **RTOS on the MicroBlaze soft processor** inside the **Arty A7-35T FPGA**. The RTOS will support **preemptive multitasking, interrupt-driven peripherals, and task management**.
 
----
-
 ## Project Structure  
 
 ```
@@ -16,7 +14,6 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 │── vitis # Vitis workspace for RTOS development
 │── README.md # Project description
 ```
----
 
 ## Features  
 
@@ -26,8 +23,6 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 - **Custom AXI peripherals** for optimized performance  
 - **Memory management & inter-task communication**  
 - **Modular design** for future enhancements  
-
----
 
 ## Task Breakdown  
 
@@ -55,16 +50,14 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 - [ ] Explore **custom AXI-based hardware accelerators**  
 - [ ] Final testing & documentation  
 
----
-
 ## Prerequisites  
 
-### **1️⃣ Software & Tools**  
+### **Software & Tools**  
 - **Xilinx Vivado & Vitis**   
 - **Python 3.8+** 
 - **Serial terminal (PuTTY, minicom, or similar)**  
 
-### **2️⃣ Python Dependencies**  
+### **Python Dependencies**  
 Install required Python packages:  
 ```bash
 pip install -r requirements.txt
@@ -74,8 +67,6 @@ pip install -r requirements.txt
 
 - **MicroBlaze Processor Reference Guide** ([Xilinx Docs](https://docs.amd.com/r/en-US/ug984-vivado-microblaze-ref/MicroBlaze-Architecture))  
 - **FreeRTOS Documentation** ([Official Site](https://www.freertos.org/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals))  
-
----
 
 ## Future Enhancements  
 
