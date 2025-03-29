@@ -55,7 +55,7 @@ Used for:
 
 ## RTOS on FPGA (MicroBlaze)
 An RTOS running on MicroBlaze must efficiently utilize FPGA resources:
- **Hardware-accelerated interrupts** for real-time responses.  
- **Efficient task scheduling** to handle multiple I/O operations.  
- **Custom peripheral drivers** for FPGA-based communication.  
+ - **Hardware-accelerated interrupts** for real-time responses.  
+ - **Efficient task scheduling** to handle multiple I/O operations.  
+ - **Custom peripheral drivers** for FPGA-based communication.  
 
