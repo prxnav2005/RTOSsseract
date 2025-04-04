@@ -5,14 +5,14 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 ## Project Structure  
 
 ```
-│── src # RTOS source code and MicroBlaze configuration
-│── tb # Testbenches for task scheduling & debugging
-│── tools # Python scripts for serial communication & debugging
-│── docs # Technical documentation & research materials
-│── interface # CLI-based debugging & UART interface tools
-│── vivado # Vivado project files (MicroBlaze setup & FPGA bitstream)
-│── vitis # Vitis workspace for RTOS development
-│── README.md # Project description
+│── src
+│── tb
+│── tools 
+│── docs 
+│── interface 
+│── vivado 
+│── vitis
+│── README.md 
 ```
 
 ## Features  
