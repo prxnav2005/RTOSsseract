@@ -1,0 +1,64 @@
+# Vivado garbage
+**/.Xil/
+**/.Xilinx/
+**/vivado/.Xil/
+**/vivado/*.jou
+**/vivado/*.log
+**/vivado/*.str
+**/vivado/*.backup.jou
+**/vivado/*.backup.log
+**/vivado/*.webtalk
+**/vivado/*.xml
+**/vivado/*.xpr~
+**/vivado/*.xpr.user
+**/vivado/*.cache/
+**/vivado/*.runs/
+**/vivado/*.hw/
+**/vivado/*.ip_user_files/
+**/vivado/*.sim/
+**/vivado/*.srcs/
+**/vivado/*.data/
+**/vivado/project_*
+
+# Vitis build output
+**/.metadata/
+**/.sdk/
+**/.project
+**/.cproject
+**/*.bin
+**/*.elf
+**/*.map
+**/*.log
+**/vitis/*/Debug/
+**/vitis/*/Release/
+**/vitis/*/build/
+**/vitis/.Xil/
+**/vitis/*.xsa
+**/vitis/*/Export/
+**/vitis/*/system_wrapper*
+
+# XSA files can be regenerated from Vivado
+*.xsa
+
+# OS & Editor files
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.venv/
+.env/
+
+# Archive & backup files
+*.zip
+*.tar.gz
+*.bak
+*.tmp
