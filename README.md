@@ -5,21 +5,27 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 ## Project Structure  
 
 ```
-│── src
-│── tb
-│── tools 
-│── docs 
-│── interface 
-│── vivado 
-│── vitis
-│── README.md 
+RTOSsseract/
+├── src/                  # HDL (Verilog/VHDL), testbenches, and maybe system design notes
+│   ├── top_module.v
+│   ├── timer_tb.v
+│   └── ...
+├── vitis/                # Vitis workspace
+│   └── RTOS_Final_App/
+│       └── src/          # All your RTOS C code + headers
+├── vivado/               # Vivado block design + constraint files
+│   └── <vivado project files>
+├── docs/                 # Any diagrams or high-level notes
+├── README.md
+└── .gitignore
+
 ```
 
 ## Features  
 
 - **Preemptive multitasking** with efficient task switching  
 - **Interrupt-driven UART shell** for real-time debugging  
-- **Peripheral interfacing** with SPI, I2C, and GPIO support  
+- **Peripheral interfacing** with GPIO, UART, and timer support  
 - **Custom AXI peripherals** for optimized performance  
 - **Memory management & inter-task communication**  
 - **Modular design** for future enhancements  
@@ -41,7 +47,7 @@ This project aims to build and run an **RTOS on the MicroBlaze soft processor** 
 
 ### **Phase 3: Peripheral Interfacing**  
 - [ ] Implement **interrupt-driven UART** for CLI interaction  
-- [ ] Add **SPI, I2C, and GPIO** integration  
+- [ ] Add **GPIO and Timer** integration  
 - [ ] Implement **real-time task execution & interrupt handling**  
 
 ### **Phase 4: Optimization & FPGA Resource Utilization**  
