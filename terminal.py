@@ -6,7 +6,7 @@ import time
 import readline
 
 PORT = "/dev/ttyUSB1"   
-BAUD = 9600
+BAUD = 115200
 LOG_FILE = "rto_shell.log"
 
 def log_output(data):
