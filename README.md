@@ -1,81 +1,88 @@
 # RTOSsseract - RTOS on MicroBlaze (Arty A7-35T)
 
-This project aims to build and run an **RTOS on the MicroBlaze soft processor** inside the **Arty A7-35T FPGA**. The RTOS will support **preemptive multitasking, interrupt-driven peripherals, and task management**.
+**RTOSsseract** is an embedded RTOS project running on the MicroBlaze soft processor inside the Arty A7-35T FPGA. It features UART-based shell interaction, modular peripheral drivers, and simple multitasking — all designed to be minimal, fast, and expandable.
 
-## Project Structure  
 
-```
-RTOSsseract/
-├── src/                  # HDL (Verilog/VHDL), testbenches, and maybe system design notes
-│   ├── top_module.v
-│   ├── timer_tb.v
-│   └── ...
-├── vitis/                # Vitis workspace
-│   └── RTOS_Final_App/
-│       └── src/          # All your RTOS C code + headers
-├── vivado/               # Vivado block design + constraint files
-│   └── <vivado project files>
-├── docs/                 # Any diagrams or high-level notes
-├── README.md
-└── .gitignore
+## Current Features 
 
-```
+- MicroBlaze processor with UART, Timer, and GPIO  
+- RTOS-style task manager (manual context switching)  
+- UART shell interface with login system  
+- Shell commands: `help`, `status`, `uptime`, etc.  
+- Modular C codebase (`timer.c`, `shell.c`, etc.)  
+- Python-based UART terminal with logging & history  
+- One-click script to load FPGA bitstream and launch terminal  
 
-## Features  
+# Project Structure
 
-- **Preemptive multitasking** with efficient task switching  
-- **Interrupt-driven UART shell** for real-time debugging  
-- **Peripheral interfacing** with GPIO, UART, and timer support  
-- **Custom AXI peripherals** for optimized performance  
-- **Memory management & inter-task communication**  
-- **Modular design** for future enhancements  
+## 📁 Project Structure
 
-## Task Breakdown  
-
-### **Phase 1: Setup & Understanding**  
-- [x] Study **MicroBlaze architecture**  
-- [x] Learn **RTOS fundamentals**  
-- [x] Set up **Vivado & Vitis** development environment  
-
-### **Phase 2: RTOS Implementation**  
-- [ ] Configure **MicroBlaze soft processor** in Vivado  
-- [ ] Generate **Bitstream & Export to Vitis**  
-- [ ] Port **FreeRTOS (or similar) to MicroBlaze**  
-- [ ] Implement **preemptive multitasking & task scheduling**  
-- [ ] Set up **heap management & memory allocation**  
-- [ ] Test with a **basic LED task switcher**  
-
-### **Phase 3: Peripheral Interfacing**  
-- [ ] Implement **interrupt-driven UART** for CLI interaction  
-- [ ] Add **GPIO and Timer** integration  
-- [ ] Implement **real-time task execution & interrupt handling**  
-
-### **Phase 4: Optimization & FPGA Resource Utilization**  
-- [ ] Monitor FPGA resource usage (**target: ≥60% utilization**)  
-- [ ] Optimize **task scheduling & memory management**  
-- [ ] Explore **custom AXI-based hardware accelerators**  
-- [ ] Final testing & documentation  
-
-## Prerequisites  
-
-### **Software & Tools**  
-- **Xilinx Vivado & Vitis**   
-- **Python 3.8+** 
-- **Serial terminal (PuTTY, minicom, or similar)**  
-
-### **Python Dependencies**  
-Install required Python packages:  
 ```bash
-pip install -r requirements.txt
+RTOSsseract/
+├── vitis/                # Vitis workspace (C source, .elf, etc.)
+│   └── RTOS_Final_App/   # App source and headers
+├── vivado/               # Vivado block design and constraints
+├── terminal.py           # Python UART shell interface
+├── launch_terminal.sh    # Script to program FPGA and launch shell
+├── src/                  # HDL files and testbenches (future use)
+├── docs/                 # Design notes & architecture diagrams
+├── .gitignore            # Git exclusions
+├── README.md             # Project documentation
+└── LICENSE               # License info
 ```
 
-## Resources Used  
 
-- **MicroBlaze Processor Reference Guide** ([Xilinx Docs](https://docs.amd.com/r/en-US/ug984-vivado-microblaze-ref/MicroBlaze-Architecture))  
-- **FreeRTOS Documentation** ([Official Site](https://www.freertos.org/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals))  
+## How to Run
 
-## Future Enhancements  
+### 1. Flash FPGA and Launch Terminal
 
-- Implement **custom drivers**  
-- Add **real-time performance profiling**  
-- Secure bootloader for **verified firmware execution**  
+From your project root:
+
+```bash
+./launch_terminal.sh
+```
+This will:
+
+- Program the FPGA using `xsct`
+- Load your `.elf` firmware
+- Launch the UART shell interface automatically
+
+**Note:** You must be inside the project folder, or modify paths in `launch_terminal.sh`.
+
+---
+
+## Prerequisites
+
+### Software & Tools
+
+- Xilinx Vivado & Vitis (2024.2)  
+- Python 3.8+  
+- USB UART driver for Arty board  
+
+### Python Dependencies
+
+Install them using:
+
+```python
+pip install pyserial
+```
+
+## 🚀 Future Optimizations
+
+- [ ] Add some real tasks  
+  - Offload basic hardware tasks like LED blinking or button monitoring using HDL  
+  - Implement PWM control or edge detection in hardware  
+  - Create custom AXI peripherals for offloaded computation (e.g., checksum, counters)  
+- [ ] Interrupt feature  
+- [ ] Real-time task execution  
+- [ ] Utilize around 60% of FPGA’s resources  
+- [ ] Add additional memory to store user logs and data  
+ 
+ 
+##  References & Credits
+
+- [Xilinx MicroBlaze Docs](https://docs.xilinx.com/)
+- [FreeRTOS Documentation](https://freertos.org/)
+- Python libraries: `pyserial`, `readline`
+
+---
