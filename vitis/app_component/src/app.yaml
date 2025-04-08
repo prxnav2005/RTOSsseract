@@ -1,4 +1,0 @@
-domain_path: /home/prawns/RTOS_Final_Vitis/platform/export/platform/sw/standalone_microblaze_0
-app_src_dir: /home/prawns/Vitis/2024.2/data/embeddedsw/lib/sw_apps/empty_application
-template: empty_application
-lang: c
