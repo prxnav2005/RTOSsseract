@@ -13,9 +13,7 @@
 - Python-based UART terminal with logging & history  
 - One-click script to load FPGA bitstream and launch terminal  
 
-# Project Structure
-
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 RTOSsseract/
