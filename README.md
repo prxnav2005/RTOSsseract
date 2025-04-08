@@ -18,7 +18,7 @@
 ```bash
 RTOSsseract/
 ├── vitis/                # Vitis workspace (C source, .elf, etc.)
-│   └── RTOS_Final_App/   # App source and headers
+│   └── app_component/   # App source and headers
 ├── vivado/               # Vivado block design and constraints
 ├── terminal.py           # Python UART shell interface
 ├── launch_terminal.sh    # Script to program FPGA and launch shell
